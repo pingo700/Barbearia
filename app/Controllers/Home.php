@@ -2,6 +2,14 @@
 
 namespace App\Controllers;
 
+$db = \Config\Database::connect();
+$db = db_connect();
+$dados = $db->query('SELECT id FROM produto;');
+
+
+
+var_dump($dados);
+die();
 class Home extends BaseController
 {
     public function index()
