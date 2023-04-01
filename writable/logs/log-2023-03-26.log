@@ -1,0 +1,96 @@
+CRITICAL - 2023-03-26 22:55:11 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-03-26 22:55:28 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+ERROR - 2023-03-26 21:23:34 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('p:localhost', 'root', Object(SensitiveParameterValue), 'barbearia', 3308, '', 0)
+#1 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(true)
+#2 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xamppp\htdocs\Barbearia-CodeIgniter\app\Controllers\Home.php(7): CodeIgniter\Database\BaseConnection->query('SELECT id FROM ...')
+#4 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(312): include_once('C:\\xamppp\\htdoc...')
+#5 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xamppp\\htdoc...')
+#6 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#8 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(892): class_exists('\\App\\Controller...', true)
+#9 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+#10 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xamppp\htdocs\Barbearia-CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(true)
+#1 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xamppp\htdocs\Barbearia-CodeIgniter\app\Controllers\Home.php(7): CodeIgniter\Database\BaseConnection->query('SELECT id FROM ...')
+#3 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(312): include_once('C:\\xamppp\\htdoc...')
+#4 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xamppp\\htdoc...')
+#5 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#7 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(892): class_exists('\\App\\Controller...', true)
+#8 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+#9 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xamppp\htdocs\Barbearia-CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-26 21:23:34 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(7): CodeIgniter\Database\BaseConnection->query('SELECT id FROM produto;')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('APPPATH\\Controllers\\Home.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 7 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 8 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-26 21:23:49 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('p:localhost', 'root', Object(SensitiveParameterValue), 'barbearia', 3308, '', 0)
+#1 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(true)
+#2 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xamppp\htdocs\Barbearia-CodeIgniter\app\Controllers\Home.php(7): CodeIgniter\Database\BaseConnection->query('SELECT id FROM ...')
+#4 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(312): include_once('C:\\xamppp\\htdoc...')
+#5 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xamppp\\htdoc...')
+#6 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#7 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#8 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(892): class_exists('\\App\\Controller...', true)
+#9 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+#10 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xamppp\htdocs\Barbearia-CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(true)
+#1 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xamppp\htdocs\Barbearia-CodeIgniter\app\Controllers\Home.php(7): CodeIgniter\Database\BaseConnection->query('SELECT id FROM ...')
+#3 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(312): include_once('C:\\xamppp\\htdoc...')
+#4 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xamppp\\htdoc...')
+#5 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#7 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(892): class_exists('\\App\\Controller...', true)
+#8 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+#9 C:\xamppp\htdocs\Barbearia-CodeIgniter\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xamppp\htdocs\Barbearia-CodeIgniter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-26 21:23:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Home.php(7): CodeIgniter\Database\BaseConnection->query('SELECT id FROM produto;')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('APPPATH\\Controllers\\Home.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 7 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Home', true)
+ 8 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

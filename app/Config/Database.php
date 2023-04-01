@@ -32,7 +32,7 @@ class Database extends Config
         'database' => 'barbearia',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
-        'pConnect' => true,
+        'pConnect' => false,
         'DBDebug'  => false,
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',

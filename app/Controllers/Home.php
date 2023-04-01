@@ -4,11 +4,17 @@ namespace App\Controllers;
 
 $db = \Config\Database::connect();
 $db = db_connect();
-$dados = $db->query('SELECT id FROM produto;');
+$dados = $db->simpleQuery('SELECT id,nome FROM produto');
+if ($db->simpleQuery('SELECT id,nome FROM produto')) {
+foreach($dados as $row)
+{
+     echo "Id é ".$row['id']."<br>";
+     echo "Nome é ".$row['nome']."<br>";
+}
+} else {
+    echo 'Falhou !';
+}
 
-
-
-var_dump($dados);
 die();
 class Home extends BaseController
 {
