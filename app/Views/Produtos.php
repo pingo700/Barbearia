@@ -1,4 +1,3 @@
-
 <?php $this->extend('layout'); ?>
 <?php $this->section('content'); ?>
 <div class="container">
@@ -69,31 +68,11 @@
           </svg></i></button>
     </div>
   </form>
-    <div class="row" style="margin-top: 35px;">
-      <div class="col text-center">
-        <button type="button" class="btn btn-light btn-institucional">{COLABORADORES}</button><br />
-        Colaboradores
-      </div>
-      <div class="col text-center">
-        <button type="button" class="btn btn-light btn-institucional">{MARCAS}</button><br />
-        Marcas
-      </div>
-      <div class="col text-center">
-        <button type="button" class="btn btn-light btn-institucional">{PRODUTOS_EM_LINHA}</button><br />
-        Produtos em linha
-      </div>
-      <div class="col text-center">
-        <button type="button" class="btn btn-light btn-institucional">{ANOS}</button><br />
-        Anos no Brasil
-      </div>
-    </div>
 </div>
 <div class="container">
 
   <div class="container" data-aos="fade-up">
-
     <hr class="mt-2">
-
     <div class="section-title">
       <h2 class="text-center">LANÇAMENTOS</h2>
     </div>
@@ -104,6 +83,8 @@
             <div class="carousel-item carousel-item-produtos active">
               <div class="row g-3 pt-4">
                 <div class="col-md-4">
+                  <?php if($produtos): ?>
+                  <?php foreach($produtos as $produto): ?>
                   <div class="card text-center bg-light">
                     <a href="#" class="position-absolute end-0 p-2 text-danger">
                       <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
@@ -112,20 +93,73 @@
                       <img src="images/balm.png" class="card-img-top " style="width: 250px; height: 340px;"></img>
                     </a>
                     <div class="card-header">
-                      R$
+                      R$<?php echo $produto['valor']; ?>
                     </div>
                     <div class="card-body">
-                      <h5 class="card-title"></h5>
+                      <h5 class="card-title"><?php echo $produto['nome']; ?></h5>
                       <p class="card-text truncar-3l">
                       </p>
                     </div>
                     <div class="card-footer">
-                      <a href="" onclick="Comprar(1)" class="btn  mt-2 d-block text-light" style="background-color: #030303;">
+                      <a href="" onclick="Comprar(<?php echo $produto['id']; ?>)" class="btn  mt-2 d-block text-light"
+                        style="background-color: #030303;">
                         Adicionar ao Carrinho
                       </a>
                       <small class="text-success"> Em estoque</small>
                     </div>
                   </div>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev w-aut" href="#recipeCarousellanc" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next w-aut" href="#recipeCarousellanc" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">
+      <h2 class="text-center">EM PROMOÇÃO</h2>
+    </div>
+    <div class="text-center produtos" data-aos="fade-up">
+      <div class="row mx-auto my-auto justify-content-center">
+        <div id="recipeCarousellanc" class="carousel carousel-produtos slide" data-bs-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item carousel-item-produtos active">
+              <div class="row g-3 pt-4">
+                <div class="col-md-4">
+                  <?php if($produtos): ?>
+                  <?php foreach($produtos as $produto): ?>
+                  <div class="card text-center bg-light">
+                    <a href="#" class="position-absolute end-0 p-2 text-danger">
+                      <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
+                    </a>
+                    <a>
+                      <img src="images/balm.png" class="card-img-top " style="width: 250px; height: 340px;"></img>
+                    </a>
+                    <div class="card-header">
+                      R$<?php echo $produto['valor']; ?>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title"><?php echo $produto['nome']; ?></h5>
+                      <p class="card-text truncar-3l">
+                      </p>
+                    </div>
+                    <div class="card-footer">
+                      <a href="" onclick="Comprar(<?php echo $produto['id']; ?>)" class="btn  mt-2 d-block text-light"
+                        style="background-color: #030303;">
+                        Adicionar ao Carrinho
+                      </a>
+                      <small class="text-success"> Em estoque</small>
+                    </div>
+                  </div>
+                  <?php endforeach; ?>
+                  <?php endif; ?>
                 </div>
               </div>
             </div>
@@ -140,4 +174,4 @@
       </div>
     </div>
   </div>
-<?php $this->endSection('content'); ?>
+  <?php $this->endSection('content'); ?>

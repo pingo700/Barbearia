@@ -1,8 +1,8 @@
 <?php 
 namespace App\Models;
 use CodeIgniter\Model;
-class ProdutoModel extends Model{
-    protected $table = 'produto';
+class SobreModel extends Model{
+    protected $table = 'sobre';
     protected $primaryKey = 'id';
 }
 

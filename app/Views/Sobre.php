@@ -1,4 +1,3 @@
-
 <?php $this->extend('layout'); ?>
 <?php $this->section('content'); ?>
 <div class="container">
@@ -8,8 +7,11 @@
       <div class="section-title">
         <h2 class="coletek-text">Sobre nós</h2>
       </div>
-      Teste
+      <?php if($sobre): ?>
+      <?php foreach($sobre as $sobre): ?>
+        <?php echo $sobre['texto']; ?>
+      <?php endforeach; ?>
+      <?php endif; ?>
     </div>
   </div>
-</div>
-<?php $this->endSection('content'); ?>
+  <?php $this->endSection('content'); ?>

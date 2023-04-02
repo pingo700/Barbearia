@@ -4,7 +4,7 @@ namespace App\Controllers;
 use App\Models\ProdutoModel;
 use CodeIgniter\Controller;
 
-class Home extends BaseController
+class Produtos extends BaseController
 {
     public function index()
     {
@@ -12,5 +12,6 @@ class Home extends BaseController
         $data['produtos'] = $produtoModel->orderBy('id')->findAll();
         return view('Produtos',$data);
     }
+
 
 }

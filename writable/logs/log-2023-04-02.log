@@ -1,0 +1,76 @@
+CRITICAL - 2023-04-02 18:24:06 --> Unmatched '}'
+in APPPATH\Controllers\Produtos.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Produtos.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Produtos')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Produtos')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Produtos', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 18:24:28 --> Unmatched '}'
+in APPPATH\Controllers\Sobre.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Sobre.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Sobre')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Sobre')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Sobre', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 18:51:28 --> Undefined variable $produtos
+in APPPATH\Views\Produtos.php on line 106.
+ 1 APPPATH\Views\Produtos.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produtos', 'APPPATH\\Views\\Produtos.php', 106)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Produtos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Produtos', [], true)
+ 5 APPPATH\Controllers\Produtos.php(10): view('Produtos')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 18:51:52 --> Class "App\Controllers\ProdutoModel" not found
+in APPPATH\Controllers\Produtos.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 18:52:52 --> Class "App\Models\ProdutoModel" not found
+in APPPATH\Controllers\Produtos.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 18:58:05 --> Class "App\Controllers\ProdutoModel" not found
+in APPPATH\Controllers\Produtos.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 19:01:51 --> Class "App\Controllers\ProdutoModel" not found
+in APPPATH\Controllers\Produtos.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 19:03:44 --> Class "App\Controllers\ProdutoModel" not found
+in APPPATH\Controllers\Produtos.php on line 9.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 19:05:30 --> Class "App\Controllers\ProdutoModel" not found
+in APPPATH\Controllers\Produtos.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Produtos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produtos))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 19:18:53 --> Undefined variable $produto
+in APPPATH\Views\Sobre.php on line 12.
+ 1 APPPATH\Views\Sobre.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produto', 'APPPATH\\Views\\Sobre.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Sobre.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Sobre', [], true)
+ 5 APPPATH\Controllers\Sobre.php(13): view('Sobre', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Sobre->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sobre))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
