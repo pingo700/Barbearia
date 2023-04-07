@@ -36,6 +36,7 @@ $routes->get('/', 'Home::index');
 $routes->get('sobre', 'Sobre::index');
 $routes->get('produtos', 'Produtos::index');
 $routes->get('login', 'Login::index');
+$routes->post('Login', 'Login::Login');
 
 
 /*

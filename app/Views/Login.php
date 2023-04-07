@@ -1,30 +1,23 @@
 
 <?php $this->extend('layout'); ?>
 <?php $this->section('content'); ?>
-<form method="POST" action="?acao=Admin&metodo=validar">
+
     <div class="card shadow-lg">
         <div class="card-body p-5">
             <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
-            <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+            <form action="Login"  method="post" class="needs-validation" novalidate>
                 <div class="mb-3">
                     <label class="mb-2 text-muted" for="email">E-Mail</label>
-                    <input id="email" type="email" class="form-control" name="email" value="" required autofocus>
-                    <div class="invalid-feedback">
-                        Email inválido
-                    </div>
+                    <input id="EMAIL" type="EMAIL" class="form-control" name="EMAIL" value="" required autofocus>
                 </div>
-
                 <div class="mb-3">
                     <div class="mb-2 w-100">
-                        <label class="text-muted" for="password">Senha</label>
+                        <label class="text-muted" for="SENHA">Senha</label>
                         <a href="forgot.html" class="float-end">
                             Esqueceu a senha?
                         </a>
                     </div>
-                    <input id="password" type="password" class="form-control" name="password" required>
-                    <div class="invalid-feedback">
-                        Senha necessária !
-                    </div>
+                    <input id="SENHA" type="SENHA" class="form-control" name="SENHA" required>
                 </div>
 
                 <div class="d-flex align-items-center">
@@ -41,5 +34,4 @@
         <div class="card-footer py-3 border-0">
         </div>
     </div>
-</form>
 <?php $this->endSection('content'); ?>
