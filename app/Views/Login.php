@@ -5,7 +5,7 @@
     <div class="card shadow-lg">
         <div class="card-body p-5">
             <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
-            <form action="Login"  method="post" class="needs-validation" novalidate>
+            <form action="Login"  method="post" validator="0" class="needs-validation" novalidate>
                 <div class="mb-3">
                     <label class="mb-2 text-muted" for="email">E-Mail</label>
                     <input id="EMAIL" type="EMAIL" class="form-control" name="EMAIL" value="" required autofocus>

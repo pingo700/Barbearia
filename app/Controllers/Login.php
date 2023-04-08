@@ -22,7 +22,7 @@ class Login extends BaseController
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to(site_url('/'));
+                return redirect()->to(site_url('Teste'));
             }else{
                 return 'Senha ou nome incorreto.';
             }

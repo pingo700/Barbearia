@@ -13,6 +13,7 @@ $routes = Services::routes();
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultController('Login');
+$routes->setDefaultController('Admin');
 $routes->setDefaultController('Produtos');
 $routes->setDefaultController('Sobre');
 $routes->setDefaultMethod('index');
@@ -37,6 +38,7 @@ $routes->get('sobre', 'Sobre::index');
 $routes->get('produtos', 'Produtos::index');
 $routes->get('login', 'Login::index');
 $routes->post('Login', 'Login::Login');
+$routes->get('Teste', 'Admin::index');
 
 
 /*
