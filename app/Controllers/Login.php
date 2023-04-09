@@ -19,6 +19,7 @@ class Login extends BaseController
                 $ses_data = [
                     'ID' => $data['id'],
                     'NOME' => $data['nome'],
+                    'CATEGORIA' => $data['categoria'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);

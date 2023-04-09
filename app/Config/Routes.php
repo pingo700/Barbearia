@@ -38,7 +38,7 @@ $routes->get('sobre', 'Sobre::index');
 $routes->get('produtos', 'Produtos::index');
 $routes->get('login', 'Login::index');
 $routes->post('Login', 'Login::Login');
-$routes->get('Teste', 'Admin::index');
+$routes->get('Teste', 'Admin::index',['filter' => 'authGuard']);
 
 
 /*
