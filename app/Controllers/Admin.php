@@ -7,7 +7,7 @@ class Admin extends BaseController
 {
     public function index()
     {
-        return view('Admin/Teste');
+        return view('Admin/Home');
     }
 
 }

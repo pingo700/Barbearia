@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <link rel="icon" type="images/png" href="images/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Barbearia</title>
+  <title>Administração Mustache</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
@@ -124,27 +124,6 @@
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="content-wrapper content-web ">
     <section class="content">
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mt-4 mb-1">
-            <div class="col-sm-6 oTitle">
-              <h1 class="m-0" id="titleM">
-
-              </h1>
-            </div>
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item text-muted" id="titleU">Home</li>
-                <li class="breadcrumb-item"><a href="Home">Home</a></li>
-                <li class="breadcrumb-item text-muted">
-                </li>
-                <li class="breadcrumb-item text-muted">
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="container-fluid">
         <?php $this->renderSection('admin_content'); ?>
       </div>
