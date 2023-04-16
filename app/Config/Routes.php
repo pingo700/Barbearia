@@ -12,6 +12,7 @@ $routes = Services::routes();
  */
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
+$routes->setDefaultController('Usuario');
 $routes->setDefaultController('Login');
 $routes->setDefaultController('Admin');
 $routes->setDefaultController('Produtos');
@@ -37,8 +38,14 @@ $routes->get('/', 'Home::index');
 $routes->get('sobre', 'Sobre::index');
 $routes->get('produtos', 'Produtos::index');
 $routes->get('login', 'Login::index');
+$routes->get('home', 'Admin::index',['filter' => 'authGuard']);
+$routes->get('CadastroCliente', 'Admin::CadastroCliente',['filter' => 'authGuard']);
+$routes->get('CadastroProduto', 'Admin::CadastroProduto',['filter' => 'authGuard']);
+$routes->get('CadastroUsuario', 'Admin::CadastroUsuario',['filter' => 'authGuard']);
+$routes->post('CadastrarProduto', 'Produtos::CadastrarProduto',['filter' => 'authGuard']);
+$routes->post('CadastrarUsuario', 'Usuario::CadastrarUsuario',['filter' => 'authGuard']);
 $routes->post('Login', 'Login::Login');
-$routes->get('Home', 'Admin::index',['filter' => 'authGuard']);
+
 
 
 /*

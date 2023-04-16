@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <link rel="icon" type="images/png" href="images/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Administração Mustache</title>
+  <title>Barbearia</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
@@ -78,7 +78,34 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
+              <a href="CadastroUsuario" class="nav-link ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+                &nbsp
+                <p> Cadastrar Usuário</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
               <a href="CadastroCliente" class="nav-link ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-people-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                </svg>
+                &nbsp
+                <p> Cadastrar Cliente</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="CadastroProduto" class="nav-link ">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                   class="bi bi-box-seam-fill" viewBox="0 0 16 16">
                   <path fill-rule="evenodd"
@@ -124,6 +151,8 @@
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="content-wrapper content-web ">
     <section class="content">
+      <div class="content-header">
+      </div>
       <div class="container-fluid">
         <?php $this->renderSection('admin_content'); ?>
       </div>
@@ -154,6 +183,6 @@
 <script src="<?= base_url() ?>Plugins/jquery-validation/jquery.validate.min.js"></script>
 <script src="<?= base_url() ?>Plugins/jquery-validation/jquery.validate.pt-br.js"></script>
 <script src="<?= base_url() ?>js/adminlte.js"></script>
-<script src="<?= base_url() ?>js/all.js<?php //echo filemtime(''.base_url().'js/all.js'); ?>"></script>
+<script src="<?= base_url() ?>js/admin.js"></script>
 
 </html>

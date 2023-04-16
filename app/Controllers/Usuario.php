@@ -1,31 +1,26 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\ProdutoModel;
+use App\Models\UsuarioModel;
 use CodeIgniter\Controller;
 
-class Produtos extends BaseController
+class Usuario extends BaseController
 {
-    public function index()
+    public function TableUsuario()
     {
-        $produtoModel = new ProdutoModel();
-        $data['produtos'] = $produtoModel->orderBy('id')->findAll();
-        return view('Produtos',$data);
+        $usuarioModel = new UsuarioModel();
+        return $this->GeraTable(__FUNCTION__ ,['N°','Nome','Categoria','Email','Senha'],$usuarioModel->orderBy('id')->findAll());
     }
 
-    public function CadastrarProduto(){
-        $produtoModel  = new ProdutoModel();
+    public function CadastrarUsuario(){
+        $usuarioModel = new UsuarioModel();
         $data = [
             'nome'       => $this->request->getVar('Nome'),
-            'valor'      => $this->request->getVar('Valor')
+            'categoria'  => $this->request->getVar('Categoria'),
+            'email'      => $this->request->getVar('Email'),
+            'senha'      => $this->request->getVar('Senha')
         ];
-        return $produtoModel->insert($data);
-    }
-
-    public function TableProdutos()
-    {
-        $produtoModel = new ProdutoModel();
-        return  $this->GeraTable(__FUNCTION__ ,['N°','Nome','Valor'],$produtoModel->orderBy('id')->findAll());
+        return $usuarioModel->insert($data);
     }
 
     private function GeraTable($FUNCTION_NAME,$CABEÇALHO,$DATA){
@@ -34,8 +29,5 @@ class Produtos extends BaseController
         $table->setHeading($CABEÇALHO);  
         return $table->generate($DATA);
     }
-
-
-
 
 }

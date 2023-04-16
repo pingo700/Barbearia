@@ -1,7 +1,7 @@
 <?php $this->extend('Admin/LayoutAdmin'); ?>
 <?php $this->section('admin_content'); ?>
 <form id="Recarregar" name="OrdenServico" class="needs-validation" method="POST"
-    action="PortalAt/OrdenServico/OrdensServicoTable" novalidate>
+    action="PortalAt/OrdenServico/OrdensServicoTable" validator="1" novalidate>
     <div class="col-md-12">
         <div class="card shadow-lg">
             <div class="card-body">
