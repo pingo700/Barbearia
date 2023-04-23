@@ -22,7 +22,7 @@ class Produtos extends BaseController
         return $produtoModel->insert($data);
     }
 
-    public function TableProdutos()
+    public function CadastroProdutoTable()
     {
         $produtoModel = new ProdutoModel();
         return  $this->GeraTable(__FUNCTION__ ,['N°','Nome','Valor'],$produtoModel->orderBy('id')->findAll());

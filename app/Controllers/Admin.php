@@ -17,10 +17,10 @@ class Admin extends BaseController
         return view('Admin/CadastroCliente');
     }
 
-    public function CadastroProduto()
+    public function CadastroProdutoPage()
     {
         $produtos = new Produtos();
-        return view('Admin/CadastroProduto',['produtos' => $produtos->TableProdutos()]);
+        return view('Admin/CadastroProduto',['produtos' => $produtos->CadastroProdutoTable()]);
     }
 
     public function CadastroUsuario()

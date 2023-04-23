@@ -1,7 +1,7 @@
 <?php $this->extend('Admin/LayoutAdmin'); ?>
 <?php $this->section('admin_content'); ?>
-<form id="CadastrarProduto" title="Deseja cadastrar esse produto ?" name="CadastrarProduto" class="needs-validation" validator="1" method="POST"
-    action="CadastrarProduto" novalidate>
+<form id="CadastroProduto" title="Deseja cadastrar esse produto ?" name="CadastroProduto" class="needs-validation" validator="1" method="POST"
+    action="CadastroProduto" novalidate>
     <div class="col-md-12">
         <div class="card shadow-lg">
             <div class="card-body">

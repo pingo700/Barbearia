@@ -40,9 +40,10 @@ $routes->get('produtos', 'Produtos::index');
 $routes->get('login', 'Login::index');
 $routes->get('home', 'Admin::index',['filter' => 'authGuard']);
 $routes->get('CadastroCliente', 'Admin::CadastroCliente',['filter' => 'authGuard']);
-$routes->get('CadastroProduto', 'Admin::CadastroProduto',['filter' => 'authGuard']);
+$routes->get('CadastroProdutoPage', 'Admin::CadastroProdutoPage',['filter' => 'authGuard']);
 $routes->get('CadastroUsuario', 'Admin::CadastroUsuario',['filter' => 'authGuard']);
-$routes->post('CadastrarProduto', 'Produtos::CadastrarProduto',['filter' => 'authGuard']);
+$routes->post('CadastroProduto', 'Produtos::CadastroProduto',['filter' => 'authGuard']);
+$routes->post('CadastroProdutoTable', 'Produtos::CadastroProdutoTable',['filter' => 'authGuard']);
 $routes->post('CadastrarUsuario', 'Usuario::CadastrarUsuario',['filter' => 'authGuard']);
 $routes->post('Login', 'Login::Login');
 

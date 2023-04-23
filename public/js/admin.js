@@ -14,21 +14,39 @@ function Carregamento() {
     }).then((result) => {})
 }
 
-function Validator(type, title, message, color) {
-    if (message != 200) {
-        Swal.fire({
-            icon: type,
-            title: title,
-            text: message,
-            confirmButtonColor: color,
-        });
-    } else {
-        Swal.close();
-    }
+function CarregaDataTable(TableName, Data) {
+    var Table = $("#" + TableName).DataTable();
+    Table.destroy();
+    $("#" + TableName + " tbody").html(Data);
+    DefinirDataTable(TableName);
 }
+
+function CarregarTable(Action) {
+    $.ajax({
+        type: "POST",
+        url: Action,
+        enctype: 'multipart/form-data',
+        dataType: "json",
+        data: $(this).serialize(),
+        beforeSend: function () {
+            Carregamento();
+        },
+        success: function (data) {
+            CarregaDataTable(Action, data);
+        }
+    }).fail(function (jqXHR, textStatus, msg) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: msg,
+            confirmButtonColor: "#f52525",
+        });
+    });
+}
+
 //Alerta('success', 'Sucesso !', 'Ticket N°' + data[0].CTP_CODIGO + ' gerado com sucesso!', "#7066e0");
 $("form").submit(function (e) {
-    if($(this).attr("validator") == 1){
+    if ($(this).attr("validator") == 1) {
         e.preventDefault();
         var form = $(this);
         var nome = $(this).attr("name")
@@ -69,12 +87,19 @@ $("form").submit(function (e) {
                             Carregamento();
                         },
                         success: function (data) {
-                            SwitchCase(id, mes, data, nome);
+                            CarregarTable('' + form.attr('action') + 'Table');
                         }
+                    }).fail(function (jqXHR, textStatus, msg) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: msg,
+                            confirmButtonColor: "#f52525",
+                        });
                     });
                 }
             })
         }
     }
-    
+
 });
