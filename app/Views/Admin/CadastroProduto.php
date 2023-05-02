@@ -38,4 +38,5 @@
         </div>
     </div>
 </div>
+<script src="<?= base_url() ?>js/CadastroProduto.js"></script>
 <?php $this->endSection('admin_content'); ?>

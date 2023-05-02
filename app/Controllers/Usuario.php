@@ -25,7 +25,8 @@ class Usuario extends BaseController
 
     private function GeraTable($FUNCTION_NAME,$CABEÇALHO,$DATA){
         $table = new \CodeIgniter\View\Table();
-        $table->setTemplate(['table_open' => '<table id="'.$FUNCTION_NAME.'" class="table table-bordered  table-sm table-striped bg-light">','heading_cell_start' => '<th class="text-center" style="white-space: nowrap">','row_start'  => '<tr class="text-center">']);
+        //$table->setTemplate(['table_open' => '<table id="'.$FUNCTION_NAME.'" class="table table-bordered  table-sm table-striped bg-light">','heading_cell_start' => '<th class="text-center" style="white-space: nowrap">','row_start'  => '<tr class="text-center">']);
+        $table->setTemplate(['table_open' => '<table id="'.$FUNCTION_NAME.'" class="table table-bordered  table-sm table-striped bg-light">']);
         $table->setHeading($CABEÇALHO);  
         return $table->generate($DATA);
     }

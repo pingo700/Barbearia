@@ -52,4 +52,5 @@
         </div>
     </div>
 </div>
+<script src="<?= base_url() ?>js/CadastroUsuario.js"></script>
 <?php $this->endSection('admin_content'); ?>
