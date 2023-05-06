@@ -1,20 +1,20 @@
 <?php $this->extend('Admin/LayoutAdmin'); ?>
 <?php $this->section('admin_content'); ?>
-<form id="CadastrarUsuario" title="Deseja cadastrar esse cliente ?" name="CadastrarUsuario" class="needs-validation" validator="1" method="POST"
-    action="CadastrarUsuario" novalidate>
+<form id="CadastrarUsuario" title="Deseja cadastrar esse cliente ?" name="CadastrarUsuario" class="needs-validation"
+    validator="1" method="POST" action="CadastrarUsuario" novalidate>
     <div class="col-md-12">
         <div class="card shadow-lg">
             <div class="card-body">
                 <div class="row">
                     <div class="form-group col-md-3">
                         <label class="form-label">Nome</label>
-                        <input id="Nome" name="Nome" type="text"
-                            style="text-transform: uppercase;" class="form-control uppercase" required>
+                        <input id="Nome" name="Nome" type="text" style="text-transform: uppercase;"
+                            class="form-control uppercase" required>
                     </div>
                     <div class="form-group col-md-3">
                         <label class="form-label">Email</label>
-                        <input id="Email" name="Email" type="text"
-                            style="text-transform: uppercase;" class="form-control uppercase" required>
+                        <input id="Email" name="Email" type="text" style="text-transform: uppercase;"
+                            class="form-control uppercase" required>
                     </div>
                     <div class="form-group col-md-2">
                         <label> Senha </label>
@@ -48,7 +48,27 @@
 <div class="card  shadow-lg">
     <div class="card-body">
         <div class="table-responsive">
-            <?php echo $usuarios; ?>
+            <table id="TableUsuario"
+                class="table table-bordered table-sm table-striped bg-light dataTable no-footer dtr-inline" role="grid"
+                aria-describedby="TableUsuario_info">
+                <thead>
+                    <tr role="row">
+                        <th class="sorting sorting_desc" tabindex="0" aria-controls="TableUsuario" rowspan="1"
+                            colspan="1" aria-sort="descending" aria-label="N°: activate to sort column ascending">N°
+                        </th>
+                        <th class="sorting" tabindex="0" aria-controls="TableUsuario" rowspan="1" colspan="1"
+                            aria-label="Nome: activate to sort column ascending">Nome</th>
+                        <th class="sorting" tabindex="0" aria-controls="TableUsuario" rowspan="1" colspan="1"
+                            aria-label="Categoria: activate to sort column ascending">Categoria</th>
+                        <th class="sorting" tabindex="0" aria-controls="TableUsuario" rowspan="1" colspan="1"
+                            aria-label="Email: activate to sort column ascending">Email</th>
+                        <th class="sorting" tabindex="0" aria-controls="TableUsuario" rowspan="1" colspan="1"
+                            aria-label="Senha: activate to sort column ascending">Senha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

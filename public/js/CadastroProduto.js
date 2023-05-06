@@ -1,7 +1,4 @@
-
-
 $(function () {
-
     $("#CadastroProdutoTable").DataTable({
         "bDestroy": true,
         "order": [

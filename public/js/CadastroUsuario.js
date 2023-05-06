@@ -1,6 +1,7 @@
 $(function () {
     $("#TableUsuario").DataTable({
         "bDestroy": true,
+        "ajax": "TableUsuario",
         "order": [
             [0, "desc"]
         ],

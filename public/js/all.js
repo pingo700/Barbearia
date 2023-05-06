@@ -1,3 +1,38 @@
+function SwitchCase(id, mes, data, nome) {
+    if ($('#' + nome + '').length) {
+        $("#DivPadrão").html(data);
+        DefinirDataTable("" + nome + "");
+        document.getElementById("" + nome + "").style.display = "block";
+        Swal.close();
+    } else {
+        switch (nome) {
+            case "CadastrarUsuario":
+                var table = $('#TableUsuario').DataTable( {
+                    ajax: "TableUsuario"
+                } );
+                 
+                setInterval( function () {
+                    table.ajax.reload();
+                }, 30000 );
+            break;
+        }
+        Alerta('error', 'Oops...', data, "#f52525");
+    }
+}
+
+function Alerta(type, title, message, color) {
+    if (message != 200) {
+        Swal.fire({
+            icon: type,
+            title: title,
+            text: message,
+            confirmButtonColor: color,
+        });
+    } else {
+        Swal.close();
+    }
+}
+
 function Carregamento() {
     Swal.fire({
         title: 'Aguarde...',

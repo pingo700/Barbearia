@@ -39,6 +39,7 @@ $routes->get('sobre', 'Sobre::index');
 $routes->get('produtos', 'Produtos::index');
 $routes->get('login', 'Login::index');
 $routes->get('home', 'Admin::index',['filter' => 'authGuard']);
+$routes->get('TableUsuario', 'Usuario::TableUsuario',['filter' => 'authGuard']);
 $routes->get('CadastroCliente', 'Admin::CadastroCliente',['filter' => 'authGuard']);
 $routes->get('CadastroProdutoPage', 'Admin::CadastroProdutoPage',['filter' => 'authGuard']);
 $routes->get('CadastroUsuario', 'Admin::CadastroUsuario',['filter' => 'authGuard']);

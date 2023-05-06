@@ -26,7 +26,7 @@ class Admin extends BaseController
     public function CadastroUsuario()
     {
         $usuario = new Usuario();
-        return view('Admin/CadastroUsuario',['usuarios' => $usuario->TableUsuario()]);
+        return view('Admin/CadastroUsuario');
     }
 
 }

@@ -9,7 +9,21 @@ class Usuario extends BaseController
     public function TableUsuario()
     {
         $usuarioModel = new UsuarioModel();
-        return $this->GeraTable(__FUNCTION__ ,['N°','Nome','Categoria','Email','Senha'],$usuarioModel->orderBy('id')->findAll());
+        foreach($usuarioModel->orderBy('id')->findAll() as $usuario){
+            $result[] = [
+                $usuario['id'],
+                $usuario['nome'],
+                $usuario['categoria'],
+                $usuario['email'],
+                $usuario['senha']
+            ];
+        }
+
+        $usuarios = [
+            'data' => $result
+        ];
+
+        return json_encode($usuarios);
     }
 
     public function CadastrarUsuario(){
